@@ -11,11 +11,19 @@ function times2(ele){
 
 function map(collection,fn){
 	for (let index=0;index<collection.length;index++){
-		collection[index]=fn(collection[index]);
+		let element = collection[index];
+		element=fn(element);
 	}
-	return collection
+	return collection.map(element=>fn(element))
+	
+	// collection.forEach(function(element){
+	// 	element=fn(element);
+	// });
+
+	// collection.forEach(element=>element=fn(element))
+	
 }
 
 module.exports = map_to_even;
 
-
+// collection.forEach(element => doSomeThingWithThisElement());

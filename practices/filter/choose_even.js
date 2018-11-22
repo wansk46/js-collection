@@ -12,3 +12,6 @@ function choose_even(collection) {
 }
 
 module.exports = choose_even;
+
+
+// return collection.filter(element=>element%2===0);
